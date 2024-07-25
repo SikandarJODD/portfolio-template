@@ -5,33 +5,31 @@
 	import { ChevronRightIcon } from 'lucide-svelte';
 	import { quartOut } from 'svelte/easing';
 	import { slide } from 'svelte/transition';
-
-	interface ResumeCardProps {
-		logoUrl: string;
-		company: string;
-		title: string;
-		subtitle?: string;
-		href?: string;
-		badges?: string[];
-		description?: string;
-		start?: string;
-		end?: string;
-	}
-	export let resumedata: ResumeCardProps;
+	export let logoUrl: string = '';
+	export let company: string = '';
+	export let title: string = '';
+	export let subtitle: string = '';
+	export let href: string = '';
+	export let badges: string[]=[''];
+	export let description: string = '';
+	export let start: string = '';
+	export let end: string = '';
 	let isExpanded = false;
 
 	let handleClick = (e: MouseEvent) => {
-		e.preventDefault();
-		isExpanded = !isExpanded;
+		if (description) {
+			e.preventDefault();
+			isExpanded = !isExpanded;
+		}
 	};
 </script>
 
-<a href={resumedata?.href || '#'} on:click={handleClick}>
+<a href={href || '#'} on:click={handleClick}>
 	<div class="flex rounded-lg bg-card text-card-foreground">
 		<div class="flex-none">
 			<Avatar.Root class="bg-muted-background m-auto size-12 border dark:bg-foreground">
-				<Avatar.Image src={resumedata.logoUrl} alt={resumedata.company} class="object-contain" />
-				<Avatar.Fallback>{resumedata.company[0]}</Avatar.Fallback>
+				<Avatar.Image src={logoUrl} alt={company} class="object-contain" />
+				<Avatar.Fallback>{company[0]}</Avatar.Fallback>
 			</Avatar.Root>
 		</div>
 		<div class="group ml-4 flex-grow flex-col items-center">
@@ -40,10 +38,10 @@
 					<h3
 						class="inline-flex items-center justify-center text-xs font-semibold leading-none sm:text-sm"
 					>
-						{resumedata.company}
-						{#if resumedata.badges}
+						{company}
+						{#if badges?.length > 0 && badges[0] !== ''}
 							<span class="inline-flex gap-x-1">
-								{#each resumedata.badges as badge, index}
+								{#each badges as badge, index}
 									<Badge variant="secondary" class="align-middle text-xs" key={index}>
 										{badge}
 									</Badge>
@@ -58,14 +56,14 @@
 						/>
 					</h3>
 					<div class="text-right text-xs tabular-nums text-muted-foreground sm:text-sm">
-						{resumedata.start} - {resumedata?.end || 'Present'}
+						{start} - {end || 'Present'}
 					</div>
 				</div>
-				{#if resumedata?.title}
-					<div class="font-sans text-xs">{resumedata.title}</div>
+				{#if title}
+					<div class="font-sans text-xs">{title}</div>
 				{/if}
 			</div>
-			{#if resumedata.description}
+			{#if description}
 				{#if isExpanded}
 					<div
 						class="mt-2 text-xs sm:text-sm"
@@ -74,7 +72,7 @@
 							easing: quartOut
 						}}
 					>
-						{resumedata.description}
+						{description}
 					</div>
 				{/if}
 			{/if}
