@@ -58,12 +58,12 @@
 		</div>
 	</section>
 	<section id="about">
-		<BlurFade delay={BLUR_FADE_DELAY * 4}>
+		<BlurFade delay={BLUR_FADE_DELAY}>
 			<h2 class="text-xl font-bold">About</h2>
 		</BlurFade>
-		<BlurFade delay={BLUR_FADE_DELAY * 5}>
+		<BlurFade delay={BLUR_FADE_DELAY * 1.4}>
 			<div
-				class="prose dark:prose-invert max-w-full text-pretty font-sans text-sm text-muted-foreground"
+				class="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert"
 			>
 				{@html marked(DATA.summary)}
 			</div>
@@ -71,11 +71,11 @@
 	</section>
 	<section id="work">
 		<div class="flex min-h-0 flex-col gap-y-3">
-			<BlurFade delay={BLUR_FADE_DELAY * 3}>
+			<BlurFade delay={BLUR_FADE_DELAY}>
 				<h2 class="text-xl font-bold">Work Experience</h2>
 			</BlurFade>
 			{#each DATA.work as work, id}
-				<BlurFade delay={BLUR_FADE_DELAY * 3 + id * 0.05}>
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
 					<ResumeCard {...work} />
 				</BlurFade>
 			{/each}
@@ -83,11 +83,11 @@
 	</section>
 	<section id="education">
 		<div class="flex min-h-0 flex-col gap-y-3">
-			<BlurFade delay={BLUR_FADE_DELAY * 4}>
+			<BlurFade delay={BLUR_FADE_DELAY}>
 				<h2 class="text-xl font-bold">Education</h2>
 			</BlurFade>
 			{#each DATA.education as edu, id}
-				<BlurFade delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
+				<BlurFade delay={BLUR_FADE_DELAY * 1.2 + id * 0.05}>
 					<ResumeCard
 						href={edu.href}
 						logoUrl={edu.logoUrl}
@@ -103,12 +103,12 @@
 	</section>
 	<section id="skills">
 		<div class="flex min-h-0 flex-col gap-y-3">
-			<BlurFade delay={BLUR_FADE_DELAY * 4}>
+			<BlurFade delay={BLUR_FADE_DELAY}>
 				<h2 class="text-xl font-bold">Skills</h2>
 			</BlurFade>
 			<div class="flex flex-wrap gap-1">
 				{#each DATA.skills as skill, id}
-					<BlurFade delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
+					<BlurFade delay={BLUR_FADE_DELAY * id + 0.002}>
 						<Badge>{skill}</Badge>
 					</BlurFade>
 				{/each}
@@ -117,7 +117,7 @@
 	</section>
 	<section id="projects">
 		<div class="w-full space-y-12 py-12">
-			<BlurFade delay={BLUR_FADE_DELAY * 8}>
+			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
 						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
@@ -137,7 +137,7 @@
 			</BlurFade>
 			<div class="mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2">
 				{#each DATA.projects as project, id}
-					<BlurFade delay={BLUR_FADE_DELAY * 10 + id * 0.05} once={false}>
+					<BlurFade delay={BLUR_FADE_DELAY * 1.5 + id * 0.05}>
 						<ProjectCard
 							href={project.href}
 							title={project.title}
@@ -155,7 +155,7 @@
 	</section>
 	<section id="hackathons">
 		<div class="w-full space-y-12 py-12">
-			<BlurFade delay={BLUR_FADE_DELAY * 2}>
+			<BlurFade delay={BLUR_FADE_DELAY}>
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
 						<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
@@ -187,7 +187,7 @@
 	</section>
 	<section id="contact">
 		<div class="grid w-full items-center justify-center gap-4 px-4 py-12 text-center md:px-6">
-			<BlurFade delay={BLUR_FADE_DELAY * 3}>
+			<BlurFade delay={BLUR_FADE_DELAY * 2}>
 				<div class="space-y-3">
 					<div class="inline-block rounded-lg bg-foreground px-3 py-1 text-sm text-background">
 						Contact

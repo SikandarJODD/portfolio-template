@@ -1,19 +1,24 @@
 ---
-title: First post
+title: Svelte is Fun
 description: First post.
-date: '2023-4-14'
+date: '2024-7-25'
 categories:
   - sveltekit
   - svelte
 published: true
 ---
 
-## Markdown
+## Svelte is Fun
 
 Hey friends! 👋
 
-```ts
-function greet(name: string) {
-	console.log(`Hey ${name}! 👋`)
-}
+```svelte
+<script>
+	export let name = 'Developers';
+
+	function greet(name: string) {
+		console.log(`Hey ${name}! 👋`);
+	}
+	let num = 0;
+</script>
 ```

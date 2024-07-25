@@ -1,23 +1,18 @@
 <script lang="ts">
 	import { formatDate } from '$lib/utils';
-	import * as config from '$lib/config';
 	import BlurFade from '$lib/components/magic/BlurFade.svelte';
 
 	export let data;
 	let BLUR_FADE_DELAY = 0.04;
-	/*
-	<!-- <a href="/blog/{post.slug}" class="title">{post.title}</a> -->
-				<!-- <p class="date">{formatDate(post.date)}</p> -->
-				<!-- <p class="description">{post.description}</p> -->
-	*/
+	
 </script>
 
 <svelte:head>
-	<title>{config.title}</title>
+	<title>Blog</title>
 </svelte:head>
 
 <BlurFade delay={BLUR_FADE_DELAY}>
-	<h1 class="mb-8 text-2xl font-medium tracking-tighter">blog</h1>
+	<h1 class="mb-8 text-2xl font-medium tracking-tighter">Blog</h1>
 </BlurFade>
 <!-- Posts -->
 <section>

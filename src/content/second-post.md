@@ -1,7 +1,7 @@
 ---
-title: Second
+title: Coding is Cool
 description: Second post.
-date: '2023-4-16'
+date: '2024-7-25'
 categories:
   - sveltekit
   - svelte

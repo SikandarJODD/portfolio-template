@@ -52,7 +52,6 @@ export let DATA = {
 		{ href: '/', icon: HomeIcon, label: 'Home' },
 		{ href: '/blog', icon: NotebookIcon, label: 'Blog' },
 		{ href: '#', icon: CodeIcon, label: 'Projects' },
-		{ href: '#', icon: PencilLine, label: 'Notes' }
 	],
 	contact: {
 		email: 'hello@example.com',
@@ -60,7 +59,7 @@ export let DATA = {
 		social: {
 			GitHub: {
 				name: 'GitHub',
-				url: 'https://github.com/SikandarJODD',
+				url: 'https://github.com/SikandarJODD/portfolio-template',
 				// // icon: Icons.github,
 				icon: Github,
 				navbar: true
@@ -79,13 +78,13 @@ export let DATA = {
 				icon: Twitter,
 				navbar: true
 			},
-			Youtube: {
-				name: 'Youtube',
-				url: 'https://github.com/SikandarJODD',
-				// // icon: Icons.youtube,
-				icon: Youtube,
-				navbar: true
-			},
+			// Youtube: {
+			// 	name: 'Youtube',
+			// 	url: 'https://github.com/SikandarJODD',
+			// 	// // icon: Icons.youtube,
+			// 	icon: Youtube,
+			// 	navbar: true
+			// },
 			email: {
 				name: 'Send Email',
 				url: '#',

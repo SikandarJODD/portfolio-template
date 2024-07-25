@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Badge from '$lib/components/ui/badge/badge.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
+	import { marked } from 'marked';
 	export let title: string;
 	export let description: string;
 	export let dates: string;
@@ -30,7 +31,7 @@
 		{/if}
 		{#if description}
 			<span class="prose dark:prose-invert text-sm text-muted-foreground">
-				{description}
+				{@html marked(description)}
 			</span>
 		{/if}
 	</div>
