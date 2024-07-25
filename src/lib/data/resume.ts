@@ -60,28 +60,28 @@ export let DATA = {
 		social: {
 			GitHub: {
 				name: 'GitHub',
-				url: 'https://dub.sh/dillion-github',
+				url: 'https://github.com/SikandarJODD',
 				// // icon: Icons.github,
 				icon: Github,
 				navbar: true
 			},
 			LinkedIn: {
 				name: 'LinkedIn',
-				url: 'https://dub.sh/dillion-linkedin',
+				url: 'https://www.linkedin.com/in/sikandar-bhide/',
 				// // icon: Icons.linkedin,
 				icon: Linkedin,
 				navbar: true
 			},
 			X: {
 				name: 'X',
-				url: 'https://dub.sh/dillion-twitter',
+				url: 'https://twitter.com/Sikandar_Bhide',
 				// // icon: Icons.x,
 				icon: Twitter,
 				navbar: true
 			},
 			Youtube: {
 				name: 'Youtube',
-				url: 'https://dub.sh/dillion-youtube',
+				url: 'https://github.com/SikandarJODD',
 				// // icon: Icons.youtube,
 				icon: Youtube,
 				navbar: true

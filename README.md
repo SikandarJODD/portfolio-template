@@ -1,20 +1,16 @@
 # Portfolio Template
-
+Inspired from [Magic UI](https://magicui.design) Portfolio Template & [Dillion Verma](https://github.com/dillionverma)
 Build with Svelte, [shadcn-svelte](https://www.shadcn-svelte.com) and [Svelte-Animations](https://animation-svelte.vercel.app)
 
 ## Features
-
 ---
-
 - Setup only takes a few minutes by editing the [single config file](https://github.com/SikandarJODD/portfolio-template/blob/main/src/lib/data/resume.ts)
 - Built using SvelteKit, Typescript, Shadcn/UI, TailwindCSS, Svelte - Motion, Svelte Animations
 - Responsive for different devices
 - Optimized for Svelte and Vercel
 
 ## Getting Started
-
 ---
-
 1. Clone the repository
 
 ```bash
