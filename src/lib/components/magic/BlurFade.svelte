@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { Motion, AnimatePresence, useAnimation } from 'svelte-motion';
+	import { Motion, AnimatePresence } from 'svelte-motion';
 	import { inview } from 'svelte-inview';
 	import { cn } from '$lib/utils';
 	export let duration = 0.4;
 	export let delay = 0;
-	export let yOffset = 6;
-	export let inViewMargin = '-50px';
-	export let blur = '6px';
-	export let id = crypto.randomUUID().slice(0, 8);
+	export let yOffset = 8;
+	export let inViewMargin = '-20px';
+	export let blur = '2px';
+	export let id = crypto.randomUUID().slice(0, 6);
 	export let once = true;
 	let defaultVariants = {
 		hidden: { opacity: 0, y: yOffset, filter: `blur(${blur})` },
